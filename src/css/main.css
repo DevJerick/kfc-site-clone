@@ -1,0 +1,61 @@
+@import url("./color.css");
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.main-text {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-text h1 {
+  font-size: 50px;
+  width: 80%;
+  font-weight: 600;
+}
+
+.main-text p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.main-text button {
+  color: #fff;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 40px;
+  border: 1px solid #fff;
+}
+
+.main-text button span {
+  padding: 0 20px;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-text button i {
+  font-size: 20px;
+  background-color: #f9a528;
+  padding: 7px 12px;
+}
+
+.main-container img {
+  width: 500px;
+  filter: drop-shadow(10px 0px 23px var(--warning));
+}

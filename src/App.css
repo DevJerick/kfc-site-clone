@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("./css/navbar.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--primary);
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 1000px) {
+  nav .nav-container button {
+    display: block;
+  }
+
+  .nav-container ul {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background: #980320;
+    flex-direction: column;
+    width: 95%;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  nav .nav-container ul.open {
+    left: 3%;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .product .product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 700px;
+  }
+
+  .product .product-container .box {
+    margin: 0 auto;
+  }
+
+  .about .about-container {
+    flex-direction: column-reverse;
+  }
+
+  main .main-text h1,
+  .about .about-text h1 {
+    font-size: 40px;
+  }
+
+  main .main-text p,
+  .about .about-text p {
+    font-size: 12px;
+  }
+
+  main {
+    margin-top: 2rem;
+  }
+
+  main .main-text button,
+  .about .about-text button {
+    margin-top: 20px;
+  }
+
+  main .main-text button span,
+  .about .about-text button span {
+    padding: 0 15px;
+    font-size: 10px;
+  }
+
+  main .main-text button i,
+  .about .about-text button i {
+    font-size: 15px;
+    background-color: #f9a528;
+    padding: 6px 10px;
+  }
+
+  .categories .categories-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .upper-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  footer .upper-container .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  footer .footer-container {
+    justify-content: center;
+  }
+
+  footer .bottom-container p {
+    font-size: 10px;
+  }
+
+  footer .bottom-container .social i {
+    font-size: 10px;
+    padding: 7px;
+  }
+
+  footer .bottom-container .social {
+    display: flex;
+    align-items: center;
+  }
+
+  footer .bottom-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .newsletter .newsletter-container h1 {
+    font-size: 25px;
+  }
+  .newsletter .newsletter-container p {
+    width: 90%;
+    font-size: 10px;
+  }
+
+  .newsletter .newsletter-container .input {
+    width: 90%;
+  }
+
+  .newsletter .newsletter-container .input input {
+    padding: 13px 18px;
+  }
+
+  .newsletter .newsletter-container .input input::placeholder {
+    font-size: 9px;
+  }
+
+  .newsletter .newsletter-container .input button {
+    width: 30%;
+    padding: 16px 0;
+    font-size: 9px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  main .main-container img,
+  .about .about-container img {
+    width: 400px;
   }
-  to {
-    transform: rotate(360deg);
+
+  main .main-text h1,
+  .about .about-text h1 {
+    font-size: 35px;
+  }
+
+  main .main-text p,
+  .about .about-text p {
+    font-size: 12px;
+  }
+
+  .product .product-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  footer .upper-container .footer-link ul li {
+    font-size: 8px;
+    margin: 0;
+  }
+
+  footer .bottom-container .copy {
+    font-size: 9px;
+  }
+
+  footer .upper-container .footer-link button {
+    font-size: 10px;
+    padding: 3px 10px;
   }
 }
