@@ -159,7 +159,7 @@ body {
 @media (max-width: 768px) {
   main .main-container img,
   .about .about-container img {
-    width: 300px;
+    width: 350px;
   }
 
   main .main-text h1,
